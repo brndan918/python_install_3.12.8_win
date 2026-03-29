@@ -1,0 +1,1 @@
+powershell -command "$p=$env:TEMP+'\python_installer.exe'; Invoke-WebRequest 'https://www.python.org/ftp/python/3.12.8/python-3.12.8-amd64.exe' -OutFile $p; Start-Process $p -Verb RunAs -ArgumentList '/quiet InstallAllUsers=0 PrependPath=1 Include_pip=1' -Wait"
